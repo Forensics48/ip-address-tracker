@@ -1,0 +1,139 @@
+html,body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.top-bar {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    background-image: url(/images/pattern-bg.png);
+    background-size: cover;
+    height: 280px;
+    text-align: center;
+}
+
+.top-bar h2 {
+    margin-top: 40px;
+    color: white;
+    font-size: 32px;
+    font-weight: 200;
+}
+
+.top-bar input[type="text"] {
+    max-width: 360px;
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 12px 0px 0px 12px;
+    font-size: 15px;
+    margin-right: 0px;
+    height: 24px;
+    border: none;
+}
+
+.top-bar input[type="button"] {
+    background-color: black;
+    color: white;
+    height: 48px;
+    width: 50px;
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+    font-size: 15px;
+}
+
+.middle-bar {
+    position: absolute;
+    top: 210px;
+    height: 150px;
+    background-color: white;
+    z-index: 99;
+    border-radius: 10px;
+}
+
+.column {
+    float: left;
+    padding: 10px 40px;
+}
+
+.column h5 {
+    color: grey;
+}
+
+.column h2 {
+    font-weight: 200;
+}
+
+.vertical-line {
+    position: absolute;
+    display: inline-block;
+    border-left: 1px solid #ccc;
+    height: 60px;
+    margin-left: 38px;
+    bottom: 35px;
+}
+
+.map-bar {
+    position: absolute;
+    margin-top: 280px;
+    width: 100%;
+    height: calc(100% - 280px);
+}
+
+#mapid {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+    .middle-bar {
+        top: 170px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .middle-bar .column h2 span {
+        display: none;
+    }
+
+    .middle-bar .column {
+        margin: 0px;
+        padding: 0px 50px;
+    }
+
+    .middle-bar h5 {
+        margin: 5px 0px 2px 0px;
+        padding: 0px;
+        font-size: 10px;
+    }
+
+    .middle-bar h5:first-child {
+        margin: 10px 0px 2px 0px;
+        padding: 0px;
+        font-size: 10px;
+    }
+
+    .middle-bar h2:last-child {
+        margin-bottom: 10px;
+    }
+
+    .middle-bar h2 {
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .top-bar input[type="text"] {
+        max-width: 240px;
+    }
+}
